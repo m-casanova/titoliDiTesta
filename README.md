@@ -10,5 +10,3 @@ Per testare il font nella versione variabile, vedere la [pagina interattiva](htt
 Sono disponibili varianti per le lettere A, E, M.
 
 ![image](titoliDiTesta_2.jpg)
-
-![image](titoliDiTesta_3.jpg)
