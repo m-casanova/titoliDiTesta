@@ -1,0 +1,176 @@
+<html>
+<title>Titoli Di Testa - A variable font</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face {
+  font-family:"test"; font-weight: 200 700;
+  src:url("/Pass-A38/font/Pass_A38.woff2") format("woff2-variations");
+}
+@font-face {
+  font-family:"test2"; font-style: italic;
+  src:url("font/titoliDiTesta.woff2") format("woff2-variations");
+}
+body { font-family:"test", sans-serif; font-size:16pt;margin:0;padding:0 }
+div { margin:0; padding:0; }
+
+a { color: #06c }
+
+header { width: 100%; margin:0; padding:0 }
+header > div { width:100%; color: #fff }
+header > div.info { background: #ae262b; }
+header > div.titolo { background: #bf3922; }
+header > div > div { width: 1180px; margin: 0px auto; padding:0 }
+header div div p { margin:0;padding:5px 10px; font-size: 14pt }
+header div div h1 { margin:0;padding:20px 10px; font-size: 30px; font-weight: 400; color: #fff }
+
+section { width: 1180px; margin:0 auto 40px; padding:0 }
+article { width: 890px; margin: 0 0 0 290; padding:0 }
+article p { margin: 5px 10px; padding:0; color: #333 }
+article p.nota { font-size: 14pt; color: #444 }
+article p.nota a.refn { font-weight: 600; }
+
+
+h2 { font-family:"test2"; margin:30px 10px;padding:0; font-size: 48pt; font-weight: 400; color: #bf3922 }
+h3 { font-family:"test2"; margin:20px 10px;padding:0; font-size: 36pt; font-weight: 700; color: #bf3922 }
+
+a.bia { color: #fff }
+a.ref { font-size: 60%; vertical-align: super; font-weight: 700 }
+
+hr { border:0; border-bottom: 1px solid #666; margin: 20px; padding:0 }
+
+table { margin: 15px auto; padding:0; text-align:center; font-size: 16pt; border-top: 1px solid #666 }
+table th { border-bottom: 1px solid #666 }
+table td { padding: 2px 6px}
+
+.f4 { font-weight: 400 }
+.f45 { font-weight: 450 }
+.f5 { font-weight: 500 }
+.f6 { font-weight: 600 }
+.f7 { font-weight: 700 }
+
+.testo { color: #444; width:90%; margin: 20px 10px; border:0; border-bottom: 1px solid #888; font-family:"test2", sans-serif; }
+input.testo { font-size:48pt; }
+button { font-size:14pt; color: #fff; margin: 10px 0; padding: 6px 10px; border:none; font-family:"test", sans-serif; font-weight: 600; background-color: #bf3922; border-radius: 8px; cursor: pointer; }
+button:hover { background-color: #ae262b; }
+
+footer { padding:0; margin:0; width: 100%; background: #2e383d; color: #fff }
+footer > div { padding:20 0; margin:0 auto; width: 1180px }
+footer p { margin: 0 10px; font-size: 18px }
+
+.feat { font-weight: 600 }
+.legg { font-weight: 200 }
+.codice { color: #666; font-size: 12pt; text-align:left; border-bottom: 1px solid #666 }
+.titoli { font-family: 'test2'; font-size: 48pt }
+.ss01 { font-feature-settings: 'ss01'; }
+.ss02 { font-feature-settings: 'ss02'; }
+.ss03 { font-feature-settings: 'ss03'; }
+
+div.side {width: 249px; margin: 30px 0 0; padding:10px 10px 5px; float:left; border-right:1px solid #555; color: #666 }
+
+@media only screen and (max-width: 1200px) {
+ header > div > div { width: 100%; }
+ section { width: 100% }
+ article { width: 100%; margin: 0; }
+ footer > div { width: 100% }
+ div.side {display:none }
+}
+</style>
+<body>
+	<header>
+		<div class="info">
+			<div>
+				<p><a href="https://github.com/m-casanova/TitoliDiTesta" class="bia">← Github</a></p>
+			</div>
+		</div>
+		<div class="titolo">
+			<div>
+				<h1>Titoli Di Testa</h1>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="side">
+			<p>Una breve descrizione del font "Titoli Di Testa"</p>
+		</div>
+		<article>
+			<h2>UN FONT VARIABILE</h2>
+			<p>Utilizzare le barre di scorrimento per testare il font.</p>
+			<input type="text" class="testo" value="Inserire un testo di prova ÀÈÉÌÒÙ"/>
+			<p><i>Impostazioni:</i> <span id="dati"></span></p>
+			<p><b>wght (200...700):</b> <input id="range_wght" type="range" value="400" min="200" max="700" step="1" oninput="aggiorna('wght', this.value)"></p>
+			<p><button onclick="reset()">Reimposta</button></p>
+
+			<h3>DESCRIZIONE</h3>
+			<p><b>Titoli Di Testa</b> è un font variabile basato sui titoli di testa di vari film italiani degli anni '30 e '40 del Novecento.</p>
+
+			<h3>CARATTERI</h3>
+			<p>Elenco dei caratteri inclusi nel font:</p>
+			<p class="titoli">! " ' ( ) , - . 0 1 2 3 4 5 6 7 8 9 : ; = ? A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </p>
+			<p>Sono presenti anche alcune versioni alternative:</p>
+			<p><span class="titoli">A À Á Æ</span> tramite SS01: <span class="titoli ss01">A À Á Æ</span></p>
+			<p><span class="titoli">E È É</span> tramite SS02: <span class="titoli ss02">E È É</span></p>
+			<p><span class="titoli">M</span> tramite SS03: <span class="titoli ss03">M</span></p>
+			<p>
+		</article>
+	</section>
+	<footer>
+		<div>
+			<p>&copy; 2024 Michele Casanova
+		</div>
+	</footer>
+
+<script>
+	var axis = { "wght": 400 }
+	var ital = 'normal';
+
+	function aggiorna2() {
+		let testi = document.querySelectorAll(".testo");
+		if (!testi) {
+			console.error("Elemento .testo non presente");
+			return;
+		}
+
+		let first = true;
+		let settings = "";
+		
+		for (let ax in axis) {
+			if (!first) {
+				settings += ", "
+			}
+			settings += "'" + ax + "' " + axis[ax];
+			first = false;
+		}
+
+		for (let tt of testi) {
+			tt.style.fontVariationSettings = settings;
+			tt.style.fontStyle = ital;
+		}
+
+		document.querySelector("#dati").innerHTML = settings;
+		
+	}
+	
+	function aggiorna(a, b) {
+		axis[a] = b;
+		aggiorna2();
+	}
+
+	function aggiorna_it(a) {
+		if (a == 1) { ital = 'italic'; } else { ital = 'normal'; }
+		aggiorna2();
+	}
+							
+	function reset() {
+		let range = null;
+
+		axis["wght"] = 400;
+		document.querySelector("#range_wght").value = 400;
+
+		aggiorna2();
+	}
+	reset();
+
+</script>
+<body>
+</html>
