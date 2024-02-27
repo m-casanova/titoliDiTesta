@@ -1,4 +1,5 @@
 # Titoli Di Testa
+- Versione 2.0: sistemazione generale dei caratteri.
 - Versione 1.0: versione iniziale.
 
 Per testare il font nella versione variabile, vedere la [pagina interattiva](https://m-casanova.github.io/titoliDiTesta/).
